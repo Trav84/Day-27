@@ -11,6 +11,7 @@ body {
 	padding:1em 1em;
 
 	h1 {
+		font-size:2em;
 		margin-bottom:1em;
 		font-weight:700;
 	}
@@ -34,4 +35,31 @@ body {
 		border-color: rgb(204,204,204);
 		border-left:3px solid rgb(51,51,51);
 	}
+
+	button {
+		background-color: rgb(29,30,46);
+		color:white;
+		padding:1em 1em;
+		font-size: 1.2em;
+		font-weight:100;
+		border: none;
+		-webkit-transition:background-color 5s;
+    	transition: background-color 5s;
+	}
+
+	button:hover {
+		background-color: #88C470;
+	}
+
+	.errorClass {
+		border-left:3px solid red;
+	}
+}
+
+.success-page {
+	background-color: white;
+	margin:0 auto;
+	margin:2em 2em;
+	padding:1em 1em;
+	font-weight:700;
 }

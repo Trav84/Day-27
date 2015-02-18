@@ -22,29 +22,33 @@
 	<script src="../bower_components/modernizr/modernizr.js"></script>
 	<!-- endbuild -->
   </head>
-  <body ng-app="app">
+  <body ng-app="app" ng-controller="loginController">
 	<!--[if lt IE 10]>
 	  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
 
-	<section class="contact-form">
+	<section class="contact-form" ng-show="submitSuccess">
 		<h1> Contact Us </h1>
-		<form ng-controller="loginController" ng-submit="submit()">
+		<form ng-submit="submit()">
 			<h2> Name </h2>
-			<input ng-model="name" type="text" placeholder="Steve McDoodle">
-			<h3 class="label label-warning" ng-bind="error1"></h3> <br>
+			<input ng-change="change()" ng-class="errorClass" ng-model="name" type="text" placeholder="Steve McDoodle">
+			<h3 ng-bind="error1"></h3> <br>
 			<h2> Email </h2>
 			<input ng-model="email" type="text" placeholder="bob@gmail.com">
-			<h3 class="label label-warning" ng-bind="error2"></h3> <br>
+			<h3 ng-bind="error2"></h3> <br>
 			<h2> Website </h2>
 			<input ng-model="website" type="text" placeholder="http://google.com">
-			<h3 class="label label-warning" ng-bind="error3"></h3> <br>
+			<h3 ng-bind="error3"></h3> <br>
 			<h2> Message </h2>
-			<textarea ng-model="text" type="text" placeholder="A friendly message..."> </textarea> <br>
-			<h3 class="label label-warning" ng-bind="error4"></h3> <br>
+			<textarea ng-model="message" type="text" placeholder="A friendly message..."> </textarea> <br>
+			<h3 ng-bind="error4"></h3> <br>
 			<button> Submit </button> <br>
 		</form>
+	</section>
+
+	<section class="success-page" ng-hide="submitSuccess">
+		<h1> Thanks for contacting us {{ name }}. We have recieved your message and will be in touch with you shortly. </h1>
 	</section>
 
 	<!-- build:js scripts/vendor.js -->
