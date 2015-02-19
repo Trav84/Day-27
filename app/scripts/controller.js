@@ -1,7 +1,6 @@
 angular.module('app.controllers', []).controller('loginController', function($scope) {
 	'use strict';
 	$scope.submitSuccess = true;
-	var emailPass = false;
 
 	$scope.$watch('name', function() {
 		if(angular.isUndefined($scope.name) || $scope.name === '') {
