@@ -71,6 +71,7 @@ angular.module('app.controllers', []).controller('loginController', function($sc
 				} else {
 					$scope.error2 = '';
 					submitPass++;
+					break;
 				}
 			}
 		}
