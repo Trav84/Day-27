@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-	<title>Day 27</title>
+	<title>Angular Contact Form</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 	<!-- build:css styles/vendor.css -->
@@ -32,16 +32,16 @@
 		<h1> Contact Us </h1>
 		<form ng-submit="submit()">
 			<h2> Name </h2>
-			<input ng-change="change()" ng-class="errorClass" ng-model="name" type="text" placeholder="Steve McDoodle">
+			<input ng-class="class1" ng-model="name" type="text" placeholder="Steve McDoodle">
 			<h3 ng-bind="error1"></h3> <br>
 			<h2> Email </h2>
-			<input ng-model="email" type="text" placeholder="bob@gmail.com">
+			<input ng-class="class2" ng-model="email" type="text" placeholder="bob@gmail.com">
 			<h3 ng-bind="error2"></h3> <br>
 			<h2> Website </h2>
-			<input ng-model="website" type="text" placeholder="http://google.com">
+			<input ng-class="class3" ng-model="website" type="text" placeholder="http://google.com">
 			<h3 ng-bind="error3"></h3> <br>
 			<h2> Message </h2>
-			<textarea ng-model="message" type="text" placeholder="A friendly message..."> </textarea> <br>
+			<textarea ng-class="class4" ng-model="message" type="text" placeholder="A friendly message..."> </textarea> <br>
 			<h3 ng-bind="error4"></h3> <br>
 			<button> Submit </button> <br>
 		</form>

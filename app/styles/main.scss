@@ -63,3 +63,18 @@ body {
 	padding:1em 1em;
 	font-weight:700;
 }
+
+@media(min-width: 992px) {
+
+	.contact-form {
+		margin:0 auto;
+		margin-top:2em;
+		width:50%;
+	}
+
+	.success-page {
+		margin:0 auto;
+		margin-top:2em;
+		width:50%;
+	}
+}
